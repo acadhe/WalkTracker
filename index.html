@@ -114,7 +114,7 @@
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
 		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
 
-		 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.2/mapbox-gl.js'></script>
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.2/mapbox-gl.js'></script>
     	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.2/mapbox-gl.css' rel='stylesheet' />
 		<!-- Taffy DB -->
 		<script type="text/javascript" src="src/js/taffy-min.js"></script>
@@ -641,17 +641,13 @@
 		var mainInfo = ["Username", "TripID"];
 		var removeInfo = ["Location", "Lat", "Lng", "Alt", "Speed", "___id", "___s", "timeStamp"];
 	  	var projectsTableID = "1ozk50GfhDEchXBiPwnmMZ1pTdEtGJmmJPq3zK704";
-		
 		mapboxgl.accessToken = 'pk.eyJ1IjoiYWNhZGhlIiwiYSI6IllHYWhiSUEifQ.al-_5fA7j3QPv54YJSTyOQ';
-var map = new mapboxgl.Map({
-    container: 'map',
-
-    style: 'mapbox://styles/acadhe/cihayoz4e006arom4lom3r0rh',
-    center: [103.851959, 1.290270],
-    zoom: 4
-});
-
-
+		var map = new mapboxgl.Map({
+			container: 'map',
+    		style: 'mapbox://styles/acadhe/cihayoz4e006arom4lom3r0rh',
+    		center: [103.851959, 1.290270],
+    		zoom: 4
+    								});
 		var tripLayer = new L.mapbox.featureLayer().addTo(map);
 		var project = getProject("walktracker");
 		var tables = initializeTables();
